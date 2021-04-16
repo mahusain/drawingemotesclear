@@ -14,11 +14,11 @@ function setup() {
   canvas.parent('sketch-holder');
   background(bgColor);
   stroke(lineColor);
-  
+
   imgSave = createButton('Save Image');
   imgSave.parent('save-button');
   imgSave.mousePressed(saveImage);
-  
+
   imgReset = createButton('Reset Image');
   imgReset.parent('reset-button');
   imgReset.mousePressed(reset);
@@ -34,14 +34,14 @@ function reset() {
 function draw() {
   background(255, 255, 255, 3)
   strokeWeight(lineWeight);
-  
+
   noiseX = 0.01;
-  lineWeight = noise(noiseX) * 5;
+  lineWeight = noise(noiseX) * 7;
   if (mouseIsPressed == true){
     line(mouseX, mouseY, pmouseX, pmouseY);
     line(width - mouseX, mouseY, width - pmouseX, pmouseY);
   stroke(lineColor);
-  
+
   }
 
 }
